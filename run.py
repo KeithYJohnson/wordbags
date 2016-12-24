@@ -1,7 +1,10 @@
 import pandas as pd
+import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from six.moves import cPickle as pickle
 from load_data import *
+from params import *
+
 
 train = pd.read_csv("cleanedlabledTrainData.tsv", header=0, quoting=3)
 
@@ -24,3 +27,10 @@ f = open(FOREST_PICKLE_FILE, 'wb')
 pickle.dump(forest, f, pickle.HIGHEST_PROTOCOL)
 f.close()
 
+test = pd.read_csv(CLEAN_TEST_DATA, header=0, quoting=3)
+test_data_features = vectorizer.transform(clean_test_reviews['review'])
+test_data_features = test_data_features.toarray()
+result = forest.predict(test_data_features)
+
+
+print('test.shape: ', test.shape)
