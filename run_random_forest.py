@@ -5,8 +5,10 @@ from six.moves import cPickle as pickle
 from load_data import *
 from params import *
 
-
+train_labeled = 'cleaned_rmswFalse_rmnlFalselabeledTrainData.tsv'
+cleaned_rmswFalse_rmnlFalseunlabeledTrainData.tsv
 train = pd.read_csv("cleanedlabledTrainData.tsv", header=0, quoting=3)
+unlabeled_train = pd.read_csv( "unlabeledTrainData.tsv", header=0, delimiter="\t", quoting=3 )
 
 print('train.shape: ', train.shape)
 print('train.columns.values: ', train.columns.values)
