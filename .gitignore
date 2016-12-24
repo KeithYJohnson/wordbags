@@ -1,1 +1,6 @@
 __pycache__
+bagofwords.csv
+cleaned_testData.tsv
+cleanedlabledTrainData.tsv
+labeledTrainData.tsv
+unlabeledTrainData.tsv
