@@ -1,5 +1,7 @@
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
+from six.moves import cPickle as pickle
+from load_data import *
 
 train = pd.read_csv("cleanedlabledTrainData.tsv", header=0, quoting=3)
 
@@ -17,4 +19,8 @@ forest = RandomForestClassifier(n_estimators = 100)
 # Fit the forest to the training set, using the bag of words as
 # features and the sentiment labels as the response variable
 forest = forest.fit( train_data_features, train["sentiment"] )
+
+f = open(FOREST_PICKLE_FILE, 'wb')
+pickle.dump(forest, f, pickle.HIGHEST_PROTOCOL)
+f.close()
 
