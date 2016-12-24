@@ -5,3 +5,5 @@ cleanedlabledTrainData.tsv
 labeledTrainData.tsv
 unlabeledTrainData.tsv
 testData.csv
+cleaned*.tsv
+forest.pickle
