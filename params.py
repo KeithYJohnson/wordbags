@@ -2,6 +2,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 FOREST_PICKLE_FILE = 'forest.pickle'
 PREDICTION_PICKLE_FILE = 'results.pickle'
 CLEAN_TEST_DATA = 'cleaned_testData.tsv'
+SENTENCES_PICKLE_FILE = 'sentences.pickle'
 
 vectorizer = CountVectorizer(
     analyzer = "word",
