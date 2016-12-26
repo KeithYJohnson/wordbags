@@ -8,3 +8,4 @@ testData.csv
 cleaned*.tsv
 forest.pickle
 sentences.pickle
+300features*
