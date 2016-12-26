@@ -7,3 +7,4 @@ unlabeledTrainData.tsv
 testData.csv
 cleaned*.tsv
 forest.pickle
+sentences.pickle
