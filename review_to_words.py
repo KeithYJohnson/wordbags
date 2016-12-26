@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 import re
 from nltk.corpus import stopwords
 
-def review_to_words(raw_review, remove_stopwords=True,  remove_nonletters=True):
+def review_to_words(raw_review, remove_stopwords=True,  remove_nonletters=True, asarray=False):
     # Function to convert a raw review to a string of words
     # The input is a single string (a raw movie review), and
     # the output is a single string (a preprocessed movie review)
@@ -27,4 +27,7 @@ def review_to_words(raw_review, remove_stopwords=True,  remove_nonletters=True):
     #
     # 6. Join the words back into one string separated by space,
     # and return the result.
-    return( " ".join( words ))
+    if asarray:
+        return(words)
+    else:
+        return( " ".join( words ))
