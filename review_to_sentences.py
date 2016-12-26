@@ -1,6 +1,6 @@
 # Download the punkt tokenizer for sentence splitting
 import nltk.data
-nltk.download()
+from review_to_words import *
 
 # Load the punkt tokenizer
 tokenizer = nltk.data.load('tokenizers/punkt/english.pickle')
@@ -19,7 +19,7 @@ def review_to_sentences( review, tokenizer, remove_stopwords=False ):
         # If a sentence is empty, skip it
         if len(raw_sentence) > 0:
             # Otherwise, call review_to_wordlist to get a list of words
-            sentences.append( review_to_wordlist( raw_sentence, \
+            sentences.append( review_to_words( raw_sentence, \
               remove_stopwords ))
     #
     # Return the list of sentences (each sentence is a list of words,
